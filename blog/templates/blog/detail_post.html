@@ -1,0 +1,82 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block title %}
+    <title>{{ post.title }}</title>
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/scss/poststyle.css' %}">
+{% endblock %} 
+
+{% block content %}
+<div class="container mt-5">
+
+    <!--Main-->
+    <h1 class="display-4 ">{{ post.title }}</h1> 
+    <div class="row mb-5">
+        <!--View Post-->
+        <div class="col-sm-8">
+            {{ post.body|safe }}
+        </div>
+        <!--Post ect...-->
+        <div class="col-sm-4">
+            <div class="content-section">
+                <h3>Phổ biến</h3>
+                <p class='text-muted'>
+                  <ul class="list-group">
+                    <li class="list-group-item list-group-item-light">Ngôn ngữ lập trình</li>
+                    <li class="list-group-item list-group-item-light">Web</li>
+                    <li class="list-group-item list-group-item-light">Ứng dụng để code</li>
+                    <li class="list-group-item list-group-item-light">Thủ thuật hosting</li>
+                  </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--Form Comment-->
+    {% if request.user.is_authenticated %}
+        <div style="overflow: auto;" class="border p-3 mb-4">
+            <form method="post">
+                {% csrf_token %}
+                <h4><img src="{{ user.profile.image.url }}" class="mr-3 rounded-circle" style="width:62px;height:62px;">{{request.user}}</h4>
+                <hr class="bg-dark">
+                {{ form.as_p }}
+                <input style="float: right;" type="submit" value="Bình Luận" class="btn btn-primary">
+            </form>        
+        </div>  
+    {% else %}
+        <h3 class="text-danger">Cần đăng nhập để bình luận</h3>
+    {% endif %} 
+    
+    <!--Result Comment-->
+    {{ comments.count }} Comment:
+    {% for comment in comments %}
+        <div class="media border p-3 mb-4">
+            <img src="{{ comment.author.profile.image.url }}" class="mr-3 rounded-circle" style="width:62px;height:62px">
+            <div class="media-body">  
+                <h4>{{ comment.author|capfirst }}<small class="ml-2"><i>{{ comment.created_on|date:"F d, Y" }}</i></small></h4>
+                <hr style="opacity: 0.3;" class="bg-dark">
+                <p style="word-break: break-all">{{ comment.content }}</p>
+            </div>
+        </div>
+    {% endfor %}
+
+</div>
+
+    <!--Javascript-->
+    <script>
+        $(document).ready(function () {
+            $("#ip1").click(function(){
+                $("#make1").slideToggle(500);
+            });
+            $("#ip2").click(function(){
+                $("#make2").slideToggle(500);
+            });
+            $("#ip3").click(function(){
+                $("#make3").slideToggle(500);
+            });
+        });
+    </script>
+{% endblock %}

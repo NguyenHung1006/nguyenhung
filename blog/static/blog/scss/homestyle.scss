@@ -1,0 +1,168 @@
+/* max width */
+@media only screen and (max-width: 768px) {
+    #contact {
+      text-align: center;
+    }
+    .carousel-caption {
+      top: 6%;
+      h1 {
+        font-size: 350%;
+      }
+      h3 {
+        font-size: 140%;
+        font-weight: 400;
+        padding-bottom: .2rem;
+      }
+      .btn {
+        font-size: 95%;
+        padding: 8px;
+      }
+    }
+  } 
+
+/* min width */  
+  @media only screen and (min-width: 768px) {
+    #contact img {
+      float: right;
+    }
+    .carousel-caption {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      h1 {
+        font-size: 500%;
+        text-transform: uppercase;
+        text-shadow: 1px 1px 10px #000;    
+      } 
+      h3 {
+        font-size: 200%;
+        font-weight: 500;
+        text-shadow: 1px 1px 1px 10px #000;
+        padding-bottom: 1rem; 
+      } 
+      .btn {
+      font-size: 130%;
+      }  
+    }
+  } 
+
+/* body */  
+  body {
+    background-color: #bff0ff;
+  }
+
+/* navbar */
+  @import "navbar.scss";  
+
+/* banner */  
+  .carousel-inner {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+/* inside banner in max,min wi */  
+
+/* services */
+  #services {
+    .infor {
+      border-bottom: #142850 solid 1px;
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+    .col-md-4 {
+      text-align: center;
+    }  
+    .icon {
+      font-size: 60px;
+      padding-bottom: 17px;
+    }
+    .iconservice {
+      padding-top: 40px;
+      padding-bottom: 30px;
+    }
+  }
+
+/* project */
+  #projects {
+    img {
+      width: 100%;
+      height: auto;
+    }
+    img:hover {
+      opacity: 0.5;
+      box-shadow: 0px 0px 1px #911750;
+    }
+    .card-body {
+      text-align: left;
+    }
+  }
+
+/* card */
+  #about {
+    .job {
+      opacity: 0.7;
+    }
+      th {
+      letter-spacing: 2.5px;
+    }
+    .card-body {
+      button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        background-color: #000;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+        letter-spacing: 4px;    
+      }
+      button:hover {
+        background-color: #77d8d8;
+        color: #000839;
+        box-shadow: 0 0 10px #08004d, 0 0 40px #08004d, 0 0 80px #08004d;
+      }
+    }
+    .card-body:hover {
+      background: linear-gradient(#00062b, rgb(185, 14, 100));
+      color: #e1ffff;
+      i {
+        color: rgb(192, 227, 238);
+      }
+    }
+    a {
+      font-size: 25px;
+      color: black;
+    }
+  }   
+  
+/* contact */
+  #inforcontact {
+    text-align: center;
+    letter-spacing: 5px;
+    border-bottom: 1px solid lavender;
+  }
+  #contact {
+    background-color: #00041a;
+    width: 100%;
+    height: 500px;
+    color: #7fd6d5;
+    img {
+      width: 300px;
+    }
+    i {
+      padding-right: 8px;
+    }
+    i:hover {
+      color: #e2fffd;
+      font-size: 25px;
+    }
+  }
+
+  .display-4:hover {
+    text-shadow: 1px 1px 3px rgb(68, 1, 68);
+  }

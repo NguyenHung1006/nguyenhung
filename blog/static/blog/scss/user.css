@@ -1,0 +1,96 @@
+body {
+  background: #f4eeff;
+  color: #333333;
+}
+
+@media only screen and (max-width: 750px) {
+  nav .nav-item {
+    text-align: center;
+  }
+  nav .nav-link:hover {
+    border: 1.5px solid #2fc4e9;
+    border-radius: 5px;
+  }
+}
+
+nav {
+  background-color: #040014;
+  font-family: Verdana,sans-serif;
+}
+
+nav .nav-link {
+  letter-spacing: 3px;
+}
+
+nav i {
+  padding-right: 6px;
+}
+
+nav i:hover {
+  color: #94f3eb;
+}
+
+nav .dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0.856);
+  color: #d2fdff;
+}
+
+.article-title {
+  color: #444444;
+}
+
+.article-title :hover {
+  color: #428bca;
+  text-decoration: none;
+}
+
+.content-section {
+  background: #ffffff;
+  padding: 10px 20px;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+
+.article-content {
+  white-space: pre-line;
+}
+
+.article-img {
+  height: 65px;
+  width: 65px;
+  margin-right: 16px;
+}
+
+.article-metadata {
+  padding-bottom: 1px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.article-metadata a:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.article-svg {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.account-img {
+  height: 125px;
+  width: 125px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.account-heading {
+  font-size: 2.5rem;
+}
+
+.media-body img:hover {
+  opacity: 0.7;
+}
+/*# sourceMappingURL=user.css.map */

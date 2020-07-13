@@ -1,0 +1,30 @@
+@media only screen and (max-width: 750px) {
+    nav {
+        .nav-item {
+            text-align: center;
+        }
+        .nav-link:hover {
+            border: 1.5px solid #2fc4e9;
+            border-radius: 5px;    
+        }
+    }    
+  }
+  
+  nav {
+    background-color: #040014;
+    font-family: Verdana,sans-serif;
+    .nav-link {
+        letter-spacing: 3px;
+    }
+    i {
+        padding-right: 6px;
+    }
+    i:hover {
+        color: #94f3eb;
+    }
+    .dropdown-item:hover {
+        background-color: rgba(0, 0, 0, 0.856);
+        color: rgb(210, 253, 255);
+    }
+  }
+  

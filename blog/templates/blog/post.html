@@ -1,0 +1,66 @@
+{% extends "blog/base.html" %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'blog/scss/poststyle.css' %}">
+{% endblock %} 
+
+{% block title %}
+    <title>Post</title> 
+{% endblock %}  
+
+{% block search %}
+    <form class="form-inline">
+        <div class="input-group">
+            <input id="myInput" type="text" class="form-control" placeholder="Search">
+            <div class="input-group-append">
+                <i style="padding-top:10px;" class="fas fa-search input-group-text"></i>
+            </div>
+        </div>   
+    </form>
+{% endblock %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4 text-center">Chia sẻ kiến thức</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8">
+                {% for post in posts %}
+                    <div id="myMedia" class="media p-3 mb-5">
+                        <div class="media-body">
+                            <h4><a style='font-size:130%' href="{{post.id}}">{{post.title}}</a><i><small class="text-muted ml-2">{{ post.date|date:"F d, Y" }}</small></i></h4>
+                            <p style="opacity: 0.9;">{{post.description}}</p>
+                            <img src="{{post.image.url}}" style="width: 75%;height: auto;"/>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="col-sm-4">
+                <div class="content-section">
+                    <h3>Phổ biến</h3>
+                    <p class='text-muted'>
+                      <ul class="list-group">
+                        <li class="list-group-item list-group-item-light">Ngôn ngữ lập trình</li>
+                        <li class="list-group-item list-group-item-light">Web</li>
+                        <li class="list-group-item list-group-item-light">Ứng dụng để code</li>
+                        <li class="list-group-item list-group-item-light">Thủ thuật hosting</li>
+                      </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myMedia .media-body").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+            });
+        });
+    </script>
+{% endblock %}

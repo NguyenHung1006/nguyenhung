@@ -1,0 +1,207 @@
+/* max width */
+@media only screen and (max-width: 768px) {
+  #contact {
+    text-align: center;
+  }
+  .carousel-caption {
+    top: 6%;
+  }
+  .carousel-caption h1 {
+    font-size: 350%;
+  }
+  .carousel-caption h3 {
+    font-size: 140%;
+    font-weight: 400;
+    padding-bottom: .2rem;
+  }
+  .carousel-caption .btn {
+    font-size: 95%;
+    padding: 8px;
+  }
+}
+
+/* min width */
+@media only screen and (min-width: 768px) {
+  #contact img {
+    float: right;
+  }
+  .carousel-caption {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .carousel-caption h1 {
+    font-size: 500%;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 10px #000;
+  }
+  .carousel-caption h3 {
+    font-size: 200%;
+    font-weight: 500;
+    text-shadow: 1px 1px 1px 10px #000;
+    padding-bottom: 1rem;
+  }
+  .carousel-caption .btn {
+    font-size: 130%;
+  }
+}
+
+/* body */
+body {
+  background-color: #bff0ff;
+}
+
+/* navbar */
+@media only screen and (max-width: 750px) {
+  nav .nav-item {
+    text-align: center;
+  }
+  nav .nav-link:hover {
+    border: 1.5px solid #2fc4e9;
+    border-radius: 5px;
+  }
+}
+
+nav {
+  background-color: #040014;
+  font-family: Verdana,sans-serif;
+}
+
+nav .nav-link {
+  letter-spacing: 3px;
+}
+
+nav i {
+  padding-right: 6px;
+}
+
+nav i:hover {
+  color: #94f3eb;
+}
+
+nav .dropdown-item:hover {
+  background-color: rgba(0, 0, 0, 0.856);
+  color: #d2fdff;
+}
+
+/* banner */
+.carousel-inner img {
+  width: 100%;
+  height: 100%;
+}
+
+/* inside banner in max,min wi */
+/* services */
+#services .infor {
+  border-bottom: #142850 solid 1px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+#services .col-md-4 {
+  text-align: center;
+}
+
+#services .icon {
+  font-size: 60px;
+  padding-bottom: 17px;
+}
+
+#services .iconservice {
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+/* project */
+#projects img {
+  width: 100%;
+  height: auto;
+}
+
+#projects img:hover {
+  opacity: 0.5;
+  -webkit-box-shadow: 0px 0px 1px #911750;
+          box-shadow: 0px 0px 1px #911750;
+}
+
+#projects .card-body {
+  text-align: left;
+}
+
+/* card */
+#about .job {
+  opacity: 0.7;
+}
+
+#about th {
+  letter-spacing: 2.5px;
+}
+
+#about .card-body button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  letter-spacing: 4px;
+}
+
+#about .card-body button:hover {
+  background-color: #77d8d8;
+  color: #000839;
+  -webkit-box-shadow: 0 0 10px #08004d, 0 0 40px #08004d, 0 0 80px #08004d;
+          box-shadow: 0 0 10px #08004d, 0 0 40px #08004d, 0 0 80px #08004d;
+}
+
+#about .card-body:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#00062b), to(#b90e64));
+  background: linear-gradient(#00062b, #b90e64);
+  color: #e1ffff;
+}
+
+#about .card-body:hover i {
+  color: #c0e3ee;
+}
+
+#about a {
+  font-size: 25px;
+  color: black;
+}
+
+/* contact */
+#inforcontact {
+  text-align: center;
+  letter-spacing: 5px;
+  border-bottom: 1px solid lavender;
+}
+
+#contact {
+  background-color: #00041a;
+  width: 100%;
+  height: 500px;
+  color: #7fd6d5;
+}
+
+#contact img {
+  width: 300px;
+}
+
+#contact i {
+  padding-right: 8px;
+}
+
+#contact i:hover {
+  color: #e2fffd;
+  font-size: 25px;
+}
+
+.display-4:hover {
+  text-shadow: 1px 1px 3px #440144;
+}
+/*# sourceMappingURL=homestyle.css.map */

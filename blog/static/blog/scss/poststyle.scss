@@ -1,0 +1,28 @@
+/* Define standard variables and values for website */
+@mixin important-text {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+  }
+
+
+body {
+    background-color: #eaffff;
+}
+
+/* navbar */
+@import "navbar.scss";  
+
+
+.col-sm-8 p {
+    font-size: 120%;
+}
+
+.media {
+    @include important-text;
+}
+
+.content-section {
+    @include important-text;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
