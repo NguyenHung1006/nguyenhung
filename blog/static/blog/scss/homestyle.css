@@ -49,7 +49,7 @@
 
 /* body */
 body {
-  background-color: #52f9ff;
+  background-color: #e1f8ff;
 }
 
 /* navbar */
@@ -93,27 +93,22 @@ nav .dropdown-item:hover {
 
 /* inside banner in max,min wi */
 /* services */
-#services .infor {
-  border-bottom: #142850 solid 1px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-}
-
-#services .col-md-4 {
-  text-align: center;
-}
-
 #services .icon {
   font-size: 60px;
   padding-bottom: 17px;
 }
 
 #services .iconservice {
+  text-align: center;
   padding-top: 40px;
   padding-bottom: 30px;
 }
 
 /* project */
+#projects {
+  background-color: #d5e0e4;
+}
+
 #projects img {
   width: 100%;
   height: auto;
@@ -130,15 +125,19 @@ nav .dropdown-item:hover {
 }
 
 /* card */
-#about .job {
+#team {
+  background-color: #010615;
+}
+
+#team .job {
   opacity: 0.7;
 }
 
-#about th {
+#team th {
   letter-spacing: 2.5px;
 }
 
-#about .card-body button {
+#team .card-body button {
   border: none;
   outline: 0;
   display: inline-block;
@@ -152,40 +151,34 @@ nav .dropdown-item:hover {
   letter-spacing: 4px;
 }
 
-#about .card-body button:hover {
+#team .card-body button:hover {
   background-color: #77d8d8;
   color: #000839;
   -webkit-box-shadow: 0 0 10px #08004d, 0 0 40px #08004d, 0 0 80px #08004d;
           box-shadow: 0 0 10px #08004d, 0 0 40px #08004d, 0 0 80px #08004d;
 }
 
-#about .card-body:hover {
+#team .card-body:hover {
   background: -webkit-gradient(linear, left top, left bottom, from(#00062b), to(#b90e64));
   background: linear-gradient(#00062b, #b90e64);
   color: #e1ffff;
 }
 
-#about .card-body:hover i {
+#team .card-body:hover i {
   color: #c0e3ee;
 }
 
-#about a {
+#team a {
   font-size: 25px;
   color: black;
 }
 
 /* contact */
-#inforcontact {
-  text-align: center;
-  letter-spacing: 5px;
-  border-bottom: 1px solid lavender;
-}
-
 #contact {
-  background-color: #00041a;
+  background-color: #05091bf3;
   width: 100%;
   height: 500px;
-  color: #7fd6d5;
+  color: #89fffd;
 }
 
 #contact img {
@@ -199,9 +192,5 @@ nav .dropdown-item:hover {
 #contact i:hover {
   color: #e2fffd;
   font-size: 25px;
-}
-
-.display-4:hover {
-  text-shadow: 1px 1px 3px #440144;
 }
 /*# sourceMappingURL=homestyle.css.map */
