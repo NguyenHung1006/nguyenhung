@@ -127,24 +127,46 @@ nav .dropdown-item:hover {
 /* card */
 #about {
   background-color: #010615;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  min-height: 100vh;
+  min-height: auto;
 }
 
 .box {
   position: relative;
-  width: 300px;
-  height: 400px;
+  width: 265px;
+  height: 265px;
+  margin: 40px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 1;
+}
+
+.box .imgbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background: #060c21;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.box .imgbox img {
+  max-width: 100%;
+  opacity: 0.1;
+  -webkit-transition: 0.5;
+  transition: 0.5;
+}
+
+.box .content {
+  color: #fff;
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  height: 90px;
+  background: rgba(0, 0, 0, 0.4);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -154,27 +176,30 @@ nav .dropdown-item:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 40px;
-  background-color: #060c21;
-  z-index: 10;
+  opacity: 0;
+  -webkit-transition: 0.5;
+  transition: 0.5;
 }
 
-.box .glass {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  display: block;
-  background-color: rgba(255, 255, 255, 0.1);
+.box .content h4 {
+  line-height: 25px;
 }
 
-.box .content {
-  padding: 20px;
-  color: #fff;
+.box .content span {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
 }
 
-.box:before {
+.box:hover {
+  height: 355px;
+}
+
+.box:hover img {
+  opacity: 1;
+}
+
+.box::before, .box::after {
   content: '';
   position: absolute;
   top: -2px;
@@ -182,27 +207,28 @@ nav .dropdown-item:hover {
   right: -2px;
   bottom: -2px;
   background-color: #fff;
-  z-index: 2;
+  z-index: -1;
 }
 
-.box:after {
-  content: '';
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  z-index: 1;
-  -webkit-filter: blur(15px);
-          filter: blur(15px);
-  background-color: #fff;
+.box::after {
+  z-index: -2;
+  -webkit-filter: blur(40px);
+          filter: blur(40px);
+}
+
+.box::before, .box::after, .box::after {
+  background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
+}
+
+.box:hover .content {
+  opacity: 1;
 }
 
 /* contact */
 #contact {
   background-color: #201029;
   width: 100%;
-  height: 500px;
+  height: auto;
   color: #89fffd;
 }
 
