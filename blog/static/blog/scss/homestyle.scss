@@ -94,47 +94,59 @@
   }
 
 /* card */
-  #team {
+  #about {
     background-color: #010615;
-    .job {
-      opacity: 0.7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+  }
+  .box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    background-color: #060c21;
+    z-index: 10;
+    .glass {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50%;
+      height: 100%;
+      display: block;
+      background-color: rgba(255,255,255,.1);
     }
-    th {
-      letter-spacing: 2.5px;
+    .content {
+      padding: 20px;
+      color: #fff;  
     }
-    .card-body {
-      button {
-        border: none;
-        outline: 0;
-        display: inline-block;
-        padding: 8px;
-        color: white;
-        background-color: #000;
-        text-align: center;
-        cursor: pointer;
-        width: 100%;
-        font-size: 18px;
-        letter-spacing: 4px;    
-      }
-      button:hover {
-        background-color: #77d8d8;
-        color: #000839;
-        box-shadow: 0 0 10px #08004d, 0 0 40px #08004d, 0 0 80px #08004d;
-      }
-    }
-    .card-body:hover {
-      background: linear-gradient(#00062b, rgb(185, 14, 100));
-      color: #e1ffff;
-      i {
-        color: rgb(192, 227, 238);
-      }
-    }
-    a {
-      font-size: 25px;
-      color: black;
-    }
-  }   
-  
+  }
+  .box:before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background-color: #fff;
+    z-index: 2;
+  }
+  .box:after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: 1;
+    filter: blur(15px);
+    background-color: #fff;
+  }
 /* contact */
   #contact {
     background-color: #201029;
