@@ -103,7 +103,7 @@
     width: 265px;
     height: 265px;
     margin: 40px;
-    transition: 0.5s;
+    transition: 0.3s;
     z-index: 1;
 
     .imgbox {
@@ -119,7 +119,7 @@
       img {
         max-width: 100%;
         opacity: 0.1;
-        transition: 0.5;
+        transition: 0.3s;
       }   
     }
 
@@ -135,7 +135,7 @@
       justify-content: center;
       align-items: center;
       opacity: 0;
-      transition: 0.5;
+      transition: 0.3s;
 
       h4 {
         line-height: 25px;
@@ -172,7 +172,12 @@
   .box::before,.box::after {
     background: linear-gradient(235deg,#89ff00,#010615,#00bcd4);
   }
-
+  .box:nth-child(2)::before,.box:nth-child(2)::after {
+    background: linear-gradient(235deg,#ff005e,#010615,#fbff00);
+  }
+  .box:nth-child(3)::before,.box:nth-child(3)::after {
+    background: linear-gradient(235deg,#772aff,#010615,#2196F3);
+  }
   .box:hover .content {
       opacity: 1;
   }

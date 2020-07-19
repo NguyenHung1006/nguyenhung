@@ -135,8 +135,8 @@ nav .dropdown-item:hover {
   width: 265px;
   height: 265px;
   margin: 40px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   z-index: 1;
 }
 
@@ -155,8 +155,8 @@ nav .dropdown-item:hover {
 .box .imgbox img {
   max-width: 100%;
   opacity: 0.1;
-  -webkit-transition: 0.5;
-  transition: 0.5;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .box .content {
@@ -177,8 +177,8 @@ nav .dropdown-item:hover {
       -ms-flex-align: center;
           align-items: center;
   opacity: 0;
-  -webkit-transition: 0.5;
-  transition: 0.5;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .box .content h4 {
@@ -218,6 +218,14 @@ nav .dropdown-item:hover {
 
 .box::before, .box::after, .box::after {
   background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
+}
+
+.box:nth-child(2)::before, .box:nth-child(2)::after, .box:nth-child(2)::after {
+  background: linear-gradient(235deg, #ff005e, #010615, #fbff00);
+}
+
+.box:nth-child(3)::before, .box:nth-child(3)::after, .box:nth-child(3)::after {
+  background: linear-gradient(235deg, #772aff, #010615, #2196F3);
 }
 
 .box:hover .content {

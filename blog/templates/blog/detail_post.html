@@ -17,7 +17,98 @@
     <div class="row mb-5">
         <!--View Post-->
         <div class="col-sm-8">
-            {{ post.body|safe }}
+            <!--Post1-->
+            {% if post.id == 1 %}
+                <!--Giới thiệu-->
+                <h3 class='mt-4' id="ip1">1-Giới thiệu</h3>
+                    <div id="make1">
+                        <p>
+                            Upload một website là bước đầu tiên cho người dùng để xuất bản sản phẩm của họ lên Internet. 
+                            Bài hướng dẫn này sẽ cung cấp ví dụ cụ thể về cách up web lên host của bạn – File Manager
+                        </p>
+                    </div>
+
+                <!--Hướng dẫn-->
+                <h3 class='mt-4' id="ip2">2-Cách up website lên host</h3>
+                    <div id="make2">
+                        <p>Chúng tôi sẽ chỉ bạn thực hành qua clip này nhớ xem đầy đủ và không tua để làm thành công</p>
+                        <h5 class="text-danger">Lưu ý: File chính phải có tên là index.html</h5><br>
+                        <video width="100%" height="auto" src="{% static 'blog/image/clip.mp4' %}" controls></video>
+                    </div>
+                    
+                <!--Kết-->
+                <h3 class="mt-4" id="ip3">3-Lời kết</h3>
+                    <div id="make3">
+                        <p>
+                            Chúc mừng, bạn đã biết cách web lên host. Như đã thấy, bạn có thể upload nhiều file một lúc 
+                            qua trang này dễ dàng, tuy nhiên mỗi file sẽ được upload từng file một, nên có thể mất nhiều thơi 
+                            gian. Vì vậy chúng tôi khuyên là nên upload một file nén và giải nén trên tài khoản hosting của bạn.
+                        </p>
+                    </div>
+            {% endif %}
+        
+            <!--Post2-->
+            {% if post.id == 2 %}
+                <!--Giới thiệu-->
+                <h3 class='mt-4' id="ip1">1-Sơ lược về Python</h3>
+                    <div id="make1">
+                        <p>
+                            Python là một ngôn ngữ lập trình bậc cao cho các mục đích lập trình đa năng, 
+                            do Guido van Rossum tạo ra và lần đầu ra mắt vào năm 1991. Python được thiết 
+                            kế với ưu điểm mạnh là dễ đọc, dễ học và dễ nhớ. Python là ngôn ngữ có hình thức 
+                            rất sáng sủa, cấu trúc rõ ràng, thuận tiện cho người mới học lập trình. Cấu trúc 
+                            của Python còn cho phép người sử dụng viết mã lệnh với số lần gõ phím tối thiểu.24 
+                            Vào tháng 7 năm 2018, Van Rossum đã từ chức Leader trong cộng đồng ngôn ngữ Python 
+                            sau 30 năm lãnh đạo
+                        </p>
+                    </div>
+
+                <!--Đặc điểm-->
+                <h3 class='mt-4' id="ip2">2-Đặc điểm</h3>
+                    <div id="make2">
+                        <strong>Cú pháp đơn giản:</strong>
+                        <p>
+                            Lập trình bằng Python rất thú vị. Nó dễ dàng để hiểu và code bằng Python. 
+                            Tại sao? Cú pháp của Python khá giống với ngôn ngữ tự nhiên, ví dụ như đoạn 
+                            code dưới đây:
+                            <i>a = 3<br>b = 5<br>sum = a + b<br>print(sum)<br>#Output 8</i>
+                        </p>
+                        <strong>Không quá khắt khe:</strong> 
+                        <p>
+                            Bạn không cần xác định kiểu của một biến trong Python, không cần thêm dấu 
+                            chấm phẩy vào cuối câu lệnh. Python buộc bạn tuân theo những bài tập có sẵn (như chỉ dẫn đúng). 
+                            Điều nhỏ nhặt này giúp cho việc học Python dễ dàng với người mới hơn rất nhiều.
+                        </p>
+                        <strong>Viết code ít hơn:</strong>   
+                        <p>
+                            Python cho phép viết những chương trình có nhiều chức năng tốt hơn với ít dòng code hơn. Bạn 
+                            có thể tham khảo mã nguồn game Tic-tac-toe <a href="https://pastebin.com/7LTkj2V5">(https://pastebin.com/7LTkj2V5) </a>với giao diện đồ 
+                            họa và đối thủ máy tính thông minh mà chỉ chưa đến 500 dòng code. Đây chỉ là một ví dụ. Bạn có thể 
+                            sẽ ngạc nhiên về những gì mà Python có thể làm được khi tìm hiểu sâu hơn về nó.
+                        </p>      
+                        <strong>Cộng đồng lớn, hỗ trợ tốt:</strong>
+                        <p>
+                            Python có một cộng đồng hỗ trợ rộng lớn, có nhiều diễn đàn hoạt động trực tuyến giúp bạn khi bị mắc kẹt với vấn đề nào đó trong Python: 
+                            <ul style="list-style-type:disc">
+                                <li><a href="https://www.reddit.com/r/learnpython/">https://www.reddit.com/r/learnpython/</a></li>
+                                <li><a href="https://groups.google.com/forum/#!forum/comp.lang.python">https://groups.google.com/forum/#!forum/comp.lang.python</a></li>
+                                <li><a href="https://stackoverflow.com/tags/python">https://stackoverflow.com/tags/python</a></li>
+                            </ul>
+                        </p>
+                    </div>
+
+                <!--Kết-->
+                <h3 class="mt-4" id="ip3">3-Lời kết</h3>
+                    <div id="make3">
+                        <p>
+                            Trong chuyên mục này, bọn mình sẽ tổng hợp lại 
+                            những tài liệu cơ bản về Python, hy vọng có thể 
+                            giúp bạn bước đầu làm quen với ngôn ngữ lập trình 
+                            đang ngày càng trở nên phổ biến này. Các bạn chú 
+                            ý theo dõi nhé.
+                        </p>
+                    </div>
+            {% endif %}
         </div>
         <!--Post ect...-->
         <div class="col-sm-4">

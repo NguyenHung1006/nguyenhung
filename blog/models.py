@@ -18,7 +18,6 @@ class Post(models.Model):
 
 class Baiviet(models.Model):
     title = models.CharField(max_length=250)
-    body = models.TextField(null=True)
     description = models.CharField(max_length=250,null=True)
     date = models.DateTimeField(auto_now_add=True) 
     image = models.ImageField(null=True)
