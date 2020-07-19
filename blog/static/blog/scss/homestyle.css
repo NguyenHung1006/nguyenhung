@@ -125,59 +125,110 @@ nav .dropdown-item:hover {
 }
 
 /* card */
-#team {
+#about {
   background-color: #010615;
+  min-height: auto;
 }
 
-#team .job {
-  opacity: 0.7;
+.box {
+  position: relative;
+  width: 265px;
+  height: 265px;
+  margin: 40px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: 1;
 }
 
-#team th {
-  letter-spacing: 2.5px;
-}
-
-#team .card-body button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 8px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
+.box .imgbox {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  padding: 10px;
+  background: #060c21;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.box .imgbox img {
+  max-width: 100%;
+  opacity: 0.1;
+  -webkit-transition: 0.5;
+  transition: 0.5;
+}
+
+.box .content {
+  color: #fff;
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  height: 90px;
+  background: rgba(0, 0, 0, 0.4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+  -webkit-transition: 0.5;
+  transition: 0.5;
+}
+
+.box .content h4 {
+  line-height: 25px;
+}
+
+.box .content span {
   font-size: 18px;
-  letter-spacing: 4px;
+  font-weight: 500;
+  line-height: 20px;
 }
 
-#team .card-body button:hover {
-  background-color: #77d8d8;
-  color: #000839;
-  -webkit-box-shadow: 0 0 10px #08004d, 0 0 40px #08004d, 0 0 80px #08004d;
-          box-shadow: 0 0 10px #08004d, 0 0 40px #08004d, 0 0 80px #08004d;
+.box:hover {
+  height: 355px;
 }
 
-#team .card-body:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#00062b), to(#b90e64));
-  background: linear-gradient(#00062b, #b90e64);
-  color: #e1ffff;
+.box:hover img {
+  opacity: 1;
 }
 
-#team .card-body:hover i {
-  color: #c0e3ee;
+.box::before, .box::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background-color: #fff;
+  z-index: -1;
 }
 
-#team a {
-  font-size: 25px;
-  color: black;
+.box::after {
+  z-index: -2;
+  -webkit-filter: blur(40px);
+          filter: blur(40px);
+}
+
+.box::before, .box::after, .box::after {
+  background: linear-gradient(235deg, #89ff00, #010615, #00bcd4);
+}
+
+.box:hover .content {
+  opacity: 1;
 }
 
 /* contact */
 #contact {
   background-color: #201029;
   width: 100%;
-  height: 500px;
+  height: auto;
   color: #89fffd;
 }
 
